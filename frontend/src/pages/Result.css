@@ -1,0 +1,79 @@
+.result-container {
+    margin: 30px auto;
+    width: 90%; /* Adjust width to fit your layout */
+    max-width: 1200px; /* Optional: Set a max-width for larger screens */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+.homepage-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: rgba(0, 0, 0, 0.5); /* Ensure the container is slightly opaque */
+    z-index: 1; /* Ensure content stays above background */
+    background-image: url('/public/indian-railway-project.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  /* To add the opacity only to the background, without affecting content */
+  .homepage-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Layer on top of image for semi-opacity */
+    z-index: -1; /* Keeps the opacity layer behind the content */
+  }
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+}
+
+.complaints-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+.complaints-table thead {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.complaints-table th,
+.complaints-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.complaints-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.complaints-table th {
+    font-weight: bold;
+    text-align: center;
+}
+
+.complaints-table td {
+    text-align: left;
+}
+
+.complaints-table tbody tr:hover {
+    background-color: #ddd;
+}

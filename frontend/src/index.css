@@ -1,0 +1,86 @@
+/* Global Reset */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Arial', sans-serif; /* Base font for consistency */
+  background-color: #f4f4f4; /* Light gray background for a clean look */
+  color: #333; /* Dark gray text color for readability */
+}
+
+/* Container Styling */
+.container {
+  background-color: #fff; /* White background for the container */
+  padding: 32px 48px;
+  border-radius: 12px; /* Rounded corners for the container */
+  width: 100%;
+  max-width: 450px; /* Maximum width of the container */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin: auto; /* Center horizontally */
+  margin-top: 20px; /* Space from the top */
+}
+
+.container > h1 {
+  margin-bottom: 24px;
+  font-size: 2rem; /* Larger font size for the heading */
+  color: #333; /* Dark gray color for text */
+  text-align: center; /* Center-align the heading */
+}
+
+/* Form Styling */
+.container > form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Increase gap for better spacing */
+}
+
+.container div {
+  display: flex;
+  flex-direction: column;
+}
+
+.container input {
+  width: 100%;
+  font-size: 1rem; /* Use rem for font size */
+  padding: 12px; /* Increase padding for a more spacious feel */
+  border: 1px solid #ddd; /* Light gray border for inputs */
+  border-radius: 6px; /* Rounded corners for inputs */
+  outline: none;
+  transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+.container input::placeholder {
+  font-size: 0.875rem; /* Slightly larger placeholder text */
+  color: #888; /* Light gray color for placeholder */
+}
+
+/* Input Focus State */
+.container input:focus {
+  border-color: #007bff; /* Blue border on focus */
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.25); /* Light blue shadow */
+}
+
+/* Button Styling */
+button {
+  background-color: #007bff; /* Blue background color */
+  border: none;
+  font-size: 1rem; /* Use rem for font size */
+  color: white;
+  border-radius: 6px; /* Rounded corners for the button */
+  padding: 12px;
+  cursor: pointer;
+  margin: 10px 0;
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}

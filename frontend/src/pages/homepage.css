@@ -1,0 +1,165 @@
+/* General Styling */
+.homepage-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: rgba(0, 0, 0, 0.5); /* Ensure the container is slightly opaque */
+  z-index: 1; /* Ensure content stays above background */
+  background-image: url('https://media.istockphoto.com/id/466506979/photo/indian-passenger-train.jpg?s=612x612&w=0&k=20&c=AKcMyvqsam93AnADQaK4hzAMI9bdWOVd8tKoF5Sf10M=');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* To add the opacity only to the background, without affecting content */
+.homepage-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Layer on top of image for semi-opacity */
+  z-index: -1; /* Keeps the opacity layer behind the content */
+}
+
+/* Header Styles */
+.homepage-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2; /* Ensures it stays above the background */
+}
+
+.homepage-header .welcome-message {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 2rem;
+  color: #fff; /* Ensure text is visible on the background */
+}
+
+.homepage-header h1 {
+  font-size: 2rem;
+  color: #fff; /* Text color is now white to contrast with the background */
+}
+
+.train-logo {
+  width: 50px; /* Adjust size as needed */
+  height: auto;
+}
+
+/* Info Section */
+.info-section {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.info-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-section li {
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+.info-section strong {
+  color: #000;
+}
+
+/* Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4-column grid */
+  gap: 20px;
+  padding: 20px;
+  margin-top: 20px;
+  justify-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.impLinks {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: contents; /* Align list items with the grid */
+}
+
+.impLinks li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.impLinks li:hover {
+  transform: scale(1.05); /* Hover effect */
+}
+
+.impLinks li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.icon img {
+  width: 61px;
+  height: 61px;
+  border-radius: 50%;
+}
+
+.titleText {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Logout Button */
+.logout-button {
+  background-color: red;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2-column grid for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .services-grid {
+    grid-template-columns: 1fr; /* Single column for mobile devices */
+  }
+}

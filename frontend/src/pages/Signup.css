@@ -1,0 +1,177 @@
+/* Signup.css */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+}
+.homepage-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: rgba(0, 0, 0, 0.5); /* Ensure the container is slightly opaque */
+    z-index: 1; /* Ensure content stays above background */
+    background-image: url('/public/indian-railway-project.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  /* To add the opacity only to the background, without affecting content */
+  .homepage-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Layer on top of image for semi-opacity */
+    z-index: -1; /* Keeps the opacity layer behind the content */
+  }
+
+.signup-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Ensures both sides have equal height */
+    height: 80vh; /* Adjust to control the overall container height */
+    max-width: 1200px;
+    margin: auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-top: 70px;
+    margin-bottom: 60px;
+}
+
+.signup-left, .signup-right {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.signup-left {
+    background-color: #f8f9fa;
+    text-align: left;
+}
+
+.signup-left h2 {
+    font-size: 32px;
+    color: #3949ab;
+    margin-bottom: 20px;
+}
+
+.signup-left p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.signup-left ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.signup-left li {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.signup-right {
+    background-color: white;
+}
+
+.signup-right h1 {
+    font-size: 28px;
+    color: #3949ab;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #3949ab;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #283593;
+}
+
+span {
+    display: block;
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+}
+
+span a {
+    color: #3949ab;
+    text-decoration: none;
+}
+
+span a:hover {
+    text-decoration: underline;
+}
+
+/* Ensure responsiveness */
+@media (max-width: 768px) {
+    .signup-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .signup-left, .signup-right {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .signup-left {
+        order: 1; /* Ensure the text appears before the form */
+    }
+
+    .signup-right {
+        order: 2;
+    }
+}
+/* Add to Signup.css */
+
+.signup-image {
+    width: auto; /* Adjust based on desired width */
+    height: 280px; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: rounded corners */
+    margin-bottom: 20px; /* Space below the image */
+}

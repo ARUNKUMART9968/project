@@ -1,0 +1,173 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+}
+
+.homepage-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: rgba(0, 0, 0, 0.5); /* Ensure the container is slightly opaque */
+  z-index: 1; /* Ensure content stays above background */
+  background-image: url('/public/indian-railway-project.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* To add the opacity only to the background, without affecting content */
+.homepage-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Layer on top of image for semi-opacity */
+  z-index: -1; /* Keeps the opacity layer behind the content */
+}
+
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  max-width: 80vw; /* Adjusted for scaling */
+  margin: 40px auto;
+  overflow: hidden;
+  height: 80vh; /* Use viewport height for scaling */
+}
+
+.form-image {
+  width: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.form-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8; /* Optional opacity */
+}
+
+.form-content {
+  width: 50%;
+  padding: 40px 50px; /* Keep original padding */
+  background-color: #f8f9fa;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.form-content h1 {
+  color: #3949ab;
+  font-size: 28px; /* Keep original font size */
+  margin-bottom: 15px;
+}
+
+.form-content p {
+  font-size: 16px; /* Keep original font size */
+  color: #555;
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: #5c6bc0;
+  font-size: 20px; /* Keep original font size */
+  margin-bottom: 15px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: block;
+  color: #333;
+}
+
+input[type="number"],
+input[type="file"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px; /* Keep original font size */
+  background-color: #fff;
+  transition: border-color 0.3s;
+}
+
+input[type="number"]:focus,
+input[type="file"]:focus,
+select:focus,
+textarea:focus {
+  border-color: #3949ab;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  background-color: #3949ab;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px; /* Keep original font size */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #283593;
+}
+
+.Toastify__toast {
+  background-color: #3949ab;
+  color: white;
+}
+
+.form-content {
+  height: 100%;
+  overflow-y: auto; /* Allows vertical scrolling */
+}
+
+@media (max-width: 768px) {
+  .form-container {
+    flex-direction: column;
+    max-width: 90%;
+    height: auto;
+  }
+
+  .form-image {
+    width: 100%;
+    height: 200px;
+  }
+
+  .form-content {
+    width: 100%;
+    padding: 20px;
+    overflow-y: visible;
+  }
+
+  .form-image img {
+    border-radius: 15px 15px 0 0;
+  }
+}
